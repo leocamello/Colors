@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Luz e Cor - Fundamentos da Computação Gráfica</title>
+</head>
+
+<body onload="main()">
+    <h1>Luz e Cor - Fundamentos da Computação Gráfica</h1>
+    <p>Aluno: Leonardo Henrique Camello do Nascimento</p>
+    <p>Professor: Marcelo Gattass</p>
+    <p>
+        Posição da camera:
+        x <input id="x_input" type="text" size="3" />
+        y <input id="y_input" type="text" size="3" />
+        z <input id="z_input" type="text" size="3" />
+        <input id="button" type="button" value="Atualizar" onclick="buttonClicked()" />
+        <p>
+            <select id="select" style="width: 400px" onchange="selectChanged()">
+                <option value="0">CIE XYZ</option>
+                <option value="1">CIE RGB</option>
+                <option value="2">sRGB</option>
+            </select>
+        </p>
+    </p>
+    <canvas id="canvas" width="500" height="500">
+        Please use a browser that supports "canvas".
+    </canvas>
+    <script src="webgl-utils.js"></script>
+    <script src="webgl-debug.js"></script>
+    <script src="cuon-utils.js"></script>
+    <script src="cuon-matrix.js"></script>
+    <script src="cie-1931-d65.js"></script>
+    <script src="cie-1931-xyz.js"></script>
+    <script src="color.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
